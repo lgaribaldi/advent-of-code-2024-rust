@@ -4,6 +4,7 @@ use std::io::{self, BufRead};
 use std::path::Path;
 mod utils;
 mod day1;
+mod day2;
 fn main() {
     let args: Vec<String> = env::args().collect();
     let puzzle = args[1].as_str();
@@ -13,6 +14,7 @@ fn main() {
     if let Ok(lines) = read_lines(filename) {
         match puzzle {
             "1" => day1::run(lines),
+            "2" => day2::run(lines),
             _ => println!("{puzzle} not implemented"),
         }
         
